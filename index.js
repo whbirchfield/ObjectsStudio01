@@ -17,6 +17,9 @@ console.log(selectRandomEntry(idNumbers));
 
 // Code your buildCrewArray function here:
 
+function builCrewArray (crewArray){
+
+}
 
 
 
