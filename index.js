@@ -14,21 +14,19 @@ function selectRandomEntry(ranEntryNumbers) {
 }
 
 // Code your buildCrewArray function here:
-
+let crewArray = [];
 function buildCrewArray (randomPicks, animalsList){
-  let crewArray = [];
+
   let crewMember = '';
   i = 0;
   while (i<randomPicks.length){
   crewMember = animalsList.find(element => element.astronautID === randomPicks[i])
   crewArray.push(crewMember.name);
   //console.log(crewMember);
-  i++
+  i++;
   }
  return crewArray;
 }
-
-
 
 // Here are the candidates and the 'animals' array:
 let candidateA = {
@@ -81,3 +79,5 @@ let animals = [candidateA, candidateB, candidateC, candidateD, candidateE, candi
 console.log(selectRandomEntry(idNumbers));
 
 console.log(buildCrewArray(selectRandomEntry(idNumbers), animals));
+
+console.log(`${crewArray[0]}, ${crewArray[1]}, and ${crewArray[2]} are going to space!`);
