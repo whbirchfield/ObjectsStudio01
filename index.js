@@ -76,8 +76,8 @@ let animals = [candidateA, candidateB, candidateC, candidateD, candidateE, candi
 
 // Code your template literal and console.log statements: 
 
-console.log(selectRandomEntry(idNumbers));
+console.log(selectRandomEntry(idNumbers) + '\n');
 
-console.log(buildCrewArray(selectRandomEntry(idNumbers), animals));
+buildCrewArray(selectRandomEntry(idNumbers), animals);
 
 console.log(`${crewArray[0]}, ${crewArray[1]}, and ${crewArray[2]} are going to space!`);
