@@ -13,12 +13,19 @@ function selectRandomEntry(ranEntryNumbers) {
   }return randomNumbers;
 }
 
-console.log(selectRandomEntry(idNumbers));
-
 // Code your buildCrewArray function here:
 
-function builCrewArray (crewArray){
-
+function buildCrewArray (randomPicks, animalsList){
+  let crewArray = [];
+  let crewMember = '';
+  i = 0;
+  while (i<randomPicks.length){
+  crewMember = animalsList.find(element => element.astronautID === randomPicks[i])
+  crewArray.push(crewMember.name);
+  //console.log(crewMember);
+  i++
+  }
+ return crewArray;
 }
 
 
@@ -70,3 +77,7 @@ let candidateF = {
 let animals = [candidateA, candidateB, candidateC, candidateD, candidateE, candidateF];
 
 // Code your template literal and console.log statements: 
+
+console.log(selectRandomEntry(idNumbers));
+
+console.log(buildCrewArray(selectRandomEntry(idNumbers), animals));
